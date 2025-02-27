@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('VISTAS/inmueble_info.php')
+    return render_template('VISTAS/inmueble_info.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
