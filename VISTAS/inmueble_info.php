@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Inmobiliaria</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+<!--  <link href="../assets/img/favicon.png" rel="icon">-->
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYw72RB7N3nERSH5n39XyY8P02lOS0_S4&callback=infoInmueble"></script>
+
+<!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYw72RB7N3nERSH5n39XyY8P02lOS0_S4&callback=initMap" async defer></script>-->
+<!--
+  <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "AIzaSyCYw72RB7N3nERSH5n39XyY8P02lOS0_S4",
+      v: "weekly",
+    });
+  </script>
+-->
+
+  <!-- =======================================================
+  * Template Name: Selecao
+  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h5 class="sitename">JESSICA REALTORS®</h5>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      
+
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+
+    </section><!-- /Hero Section -->
+
+    <section id="about" class="about section" style="width: 100%;">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 id="tipo_Inmueble"></h2>
+        <p id="nombre_Inmueble"></p>
+      </div>
+		
+		<div id="imagenesInmueble" class="container" style="width: 100%; text-align: center; position: relative;">
+			<div id="mainViewer" style="width: 100%;">
+				<img id="mainImage" src="" style="width: 100%; display: none;">
+				<video id="mainVideo" style="width: 100%; display: none;" controls></video>
+			</div>
+
+			<!-- Flechas de navegación -->
+			<div id="prevArrow" class="arrow" style="left: 0;">&#10094;</div>
+			<div id="nextArrow" class="arrow" style="right: 0;">&#10095;</div>
+
+			<!-- Miniaturas -->
+			<div id="thumbnails" style="display: flex; overflow-x: auto; margin-top: 10px; justify-content: center;">
+			</div>
+		</div>
+		
+		<div id="caracteristicasInmueble" class="container section-title" style="width: 100%;">
+			<div class="col-lg-12 col-md-12 col-sm-12 p-4">
+				<p class="text-right mb-4">Detalles del Inmueble</p>
+				<div class="row">
+					<div class="col-md-12 mb-2">
+						<label for="pinm" class="form-label"><strong>Precio:</strong></label><br>
+						<label for="pinm" class="form-label" style="font-size: 35px;" id="precio_Inmueble"><strong></strong></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="painm" class="form-label"><strong>País:</strong></label>
+						<label for="painm" class="form-label" id="pais_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="proinm" class="form-label"><strong>Provincia:</strong></label>
+						<label for="proinm" class="form-label" id="provincia_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="ciuinm" class="form-label"><strong>Ciudad:</strong></label>
+						<label for="ciuinm" class="form-label" id="ciudad_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="zinm" class="form-label"><strong>Zona:</strong></label>
+						<label for="zinm" class="form-label" id="zona_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="acinm" class="form-label"><strong>Area Construida:</strong></label>
+						<label for="acinm" class="form-label" id="areaconstruida_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="atinm" class="form-label"><strong>Area del Terreno:</strong></label>
+						<label for="atinm" class="form-label" id="areaterreno_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="nhinm" class="form-label"><strong>N° Habitaciones:</strong></label>
+						<label for="nhinm" class="form-label" id="nhabitaciones_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="nginm" class="form-label"><strong>N° Garajes:</strong></label>
+						<label for="nginm" class="form-label" id="ngarajes_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="nbinm" class="form-label"><strong>N° Baños:</strong></label>
+						<label for="nbinm" class="form-label" id="nbanios_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="einm" class="form-label"><strong>Estrato:</strong></label>
+						<label for="einm" class="form-label" id="estrato_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="acinm" class="form-label"><strong>Año de construcción:</strong></label>
+						<label for="acinm" class="form-label" id="anioconstruccion_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="tinm" class="form-label"><strong>Tipo de Inmueble:</strong></label>
+						<label for="tinm" class="form-label" id="tipoi_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="tninm" class="form-label"><strong>Tipo de Negocio:</strong></label>
+						<label for="tninm" class="form-label" id="tiponegocio_Inmueble"></label>
+					</div>
+					<div class="col-md-4 mb-2">
+						<label for="estinm" class="form-label"><strong>Estado del Inmueble:</strong></label>
+						<label for="estinm" class="form-label" id="estado_Inmueble"></label>
+					</div>
+				</div>
+				<p class="text-right mb-4">Características Internas</p>
+				<div class="row" id="caracterstcasInt">
+					
+				</div>
+				<p class="text-right mb-4">Características Externas</p>
+				<div class="row" id="caracterstcasExt">
+					
+				</div>
+				<p class="text-right mb-4">Descripción Adicional</p>
+				<div class="row">
+					<div class="col-md-12 mb-2">
+						<label for="dainm" class="form-label" id="adicional_Inmueble"></label>
+					</div>
+				</div>
+				<p class="text-right mb-4">Ubicación Georeferencial</p>
+				<div id="ubicacion" style="width: 100%; height: 400px;"></div>
+			</div>
+		</div>
+		
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">JESSICA REALTORS®</h3>
+      <p>Tu inmobiliaria activa</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">JESSICA REALTORS®</strong> <span>Todos los derechos reservados</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Developed by <a>BAEC</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="JS/jquery.min.js"></script>
+  <script src="JS/bootbox.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/datatables/jquery.dataTables.min.js"></script>
+  <script src="../assets/datatables/buttons.colVis.min.js"></script>
+  <script src="../assets/datatables/buttons.html5.min.js"></script>
+  <script src="../assets/datatables/dataTables.buttons.min.js"></script>
+  <script src="../assets/datatables/jszip.min.js"></script>
+
+  <script src="../assets/datatables/pdfmake.min.js"></script>
+  <script src="../assets/datatables/vfs_fonts.js"></script>
+  <script src="../assets/datatables/datatables.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+  <script src="JS/info.js"></script>
+  
+</body>
+
+</html>
