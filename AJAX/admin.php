@@ -172,13 +172,13 @@ switch ($_GET['op']){
 		
 	case 'infoInmueble':
 		
-		$rspt=$admin->infoInmueble($_SESSION['idinmueble']);
+		$rspt=$admin->infoInmueble(5);
 		echo json_encode($rspt, JSON_UNESCAPED_UNICODE);
 		break;
 		
 	case 'mostrarGaleria':
 		
-		$targetDir = "../FILES/inmuebles/" . $_SESSION['idinmueble'] . "-inmueble/";
+		$targetDir = "../FILES/inmuebles/" . 5 . "-inmueble/";
 
 		if (!is_dir($targetDir)) {
 			echo json_encode(["error" => "No existe la carpeta"]);
